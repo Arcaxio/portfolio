@@ -20,7 +20,34 @@ const config: Config = {
       },
     },
   },
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+
+          "primary": "#111827",
+
+          "secondary": "#f3f4f6",
+
+          "accent": "#1d4ed8",
+
+          "neutral": "#1f2937",
+
+          "base-100": "#111827",
+
+          "info": "#0000ff",
+
+          "success": "#00ff00",
+
+          "warning": "#fde047",
+
+          "error": "#ff0000",
+        },
+      },
+    ],
+  },
   plugins: [
+    require('daisyui'),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
