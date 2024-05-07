@@ -1,7 +1,12 @@
 "use client";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlights";
+import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import logo from '../../public/logo.png';
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reavel-card";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
   return (
@@ -30,6 +35,18 @@ export default function Home() {
           </Highlight>
         </motion.h1>
       </HeroHighlight>
+
+      <MacbookScroll src={logo} title="Cool scroll animation, woah" />
+
+      <BackgroundGradientAnimation>
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+          <p className="bg-clip-text drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            Cool Gradient Section
+          </p>
+        </div>
+      </BackgroundGradientAnimation>
+
+      {/* Grid Background */}
       <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -37,6 +54,8 @@ export default function Home() {
           More to come!
         </p>
       </div>
+
+      <CanvasRevealEffectDemo />
     </main>
   );
 }

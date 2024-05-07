@@ -13,14 +13,17 @@
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.2.1",
     "@coreui/react": "^5.0.0",
+    "@react-three/fiber": "^8.16.3",
+    "@tabler/icons-react": "^3.3.0",
     "@vercel/postgres": "^0.8.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.1.8",
+    "framer-motion": "^11.1.9",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "three": "^0.164.1"
   },
   "devDependencies": {
     "@types/node": "^20",
