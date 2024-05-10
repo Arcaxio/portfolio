@@ -8,8 +8,13 @@ export default async function Projects() {
     return (
         <main>
             <div className="navbar justify-center bg-base-100">
-                <p className="btn btn-ghost text-xl"><Link href='/'>Home</Link></p>
+                <Link href='/'>
+                    <div className="btn btn-ghost text-xl">
+                        Home
+                    </div>
+                </Link>
             </div>
+
             <div className='px-10'>
                 <div className="flex flex-col w-full border-opacity-50">
                     <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 1</div>
@@ -17,10 +22,13 @@ export default async function Projects() {
                         {
                             data?.map((data) => (
                                 data.act === 1 ?
-                                    <Card key={data.id} title={data.title} text={data.text} /> : null
+                                    <Link key={data.id} href={`/projects/${data.id}`}>
+                                        <Card title={data.title} text={data.text} />
+                                    </Link>
+                                    : null
                             ))
                         }
-                        <Link href='/create'>
+                        <Link href='/projects/create'>
                             <Card />
                         </Link>
                     </div>
@@ -32,7 +40,7 @@ export default async function Projects() {
                                     <Card key={data.id} title={data.title} text={data.text} /> : null
                             ))
                         }
-                        <Link href='/create'>
+                        <Link href='/projects/create'>
                             <Card />
                         </Link>
                     </div>
@@ -44,7 +52,7 @@ export default async function Projects() {
                                     <Card key={data.id} title={data.title} text={data.text} /> : null
                             ))
                         }
-                        <Link href='/create'>
+                        <Link href='/projects/create'>
                             <Card />
                         </Link>
                     </div>

@@ -6,9 +6,11 @@ import { cilPlus } from '@coreui/icons';
 export const Card = ({
     title,
     text,
+    children,
 }: {
     title?: string;
     text?: string;
+    children?: React.ReactNode;
 }) => {
     return (
         <div className="card bg-primary hover:bg-accent border-2 border-blue-800 cursor-pointer shadow-xl">
@@ -21,6 +23,9 @@ export const Card = ({
                 }
                 {
                     text ?? <CIcon icon={cilPlus} height={64} />
+                }
+                {
+                    children
                 }
             </div>
         </div>
