@@ -5,8 +5,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.arcaxio.com'),
+  title: 'Arcaxio\'s Portfolio',
+  description: 'Arcaxio\'s Portfolio and Playground',
+  keywords: ['Next.js', 'Arcaxio', 'Portfolio', 'Web Dev'],
   openGraph: {
-    title: 'Arcaxio Portfolio',
+    title: 'Arcaxio\'s Portfolio',
     description: 'Arcaxio\'s Portfolio and Playground',
     url: 'https://www.arcaxio.com/',
     siteName: 'arcaxio.com',
