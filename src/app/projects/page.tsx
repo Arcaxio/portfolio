@@ -37,7 +37,10 @@ export default async function Projects() {
                         {
                             data?.map((data) => (
                                 data.act === 2 ?
-                                    <Card key={data.id} title={data.title} text={data.text} /> : null
+                                    <Link key={data.id} href={`/projects/${data.id}`}>
+                                        <Card title={data.title} text={data.text} />
+                                    </Link>
+                                    : null
                             ))
                         }
                         <Link href='/projects/create'>
@@ -49,7 +52,10 @@ export default async function Projects() {
                         {
                             data?.map((data) => (
                                 data.act === 3 ?
-                                    <Card key={data.id} title={data.title} text={data.text} /> : null
+                                    <Link key={data.id} href={`/projects/${data.id}`}>
+                                        <Card title={data.title} text={data.text} />
+                                    </Link>
+                                    : null
                             ))
                         }
                         <Link href='/projects/create'>
