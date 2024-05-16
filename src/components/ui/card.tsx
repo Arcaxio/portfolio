@@ -4,10 +4,12 @@ import CIcon from '@coreui/icons-react';
 import { cilPlus } from '@coreui/icons';
 
 export const Card = ({
+    id,
     title,
     text,
     children,
 }: {
+    id?: number;
     title?: string;
     text?: string;
     children?: React.ReactNode;
@@ -17,9 +19,13 @@ export const Card = ({
             <div className={`card-body p-4 min-h-44 ${!!title ? null : "justify-center"}`}>
                 {
                     !!title ?
-                    <div className="card-title">
-                        {title}
-                    </div> : <></>
+                        <div className="flex justify-between">
+                            <div className="card-title">
+                                {title}
+                            </div>
+                        </div>
+                        :
+                        <></>
                 }
                 {
                     text ?? <CIcon icon={cilPlus} height={64} />

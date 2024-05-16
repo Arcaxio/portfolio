@@ -2,6 +2,8 @@ import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import { fetchData } from './fetch';
 
+export const dynamic = 'force-dynamic'
+
 export default async function Projects() {
     const data = await fetchData();
 
@@ -23,7 +25,7 @@ export default async function Projects() {
                             data?.map((data) => (
                                 data.act === 1 ?
                                     <Link key={data.id} href={`/projects/${data.id}`}>
-                                        <Card title={data.title} text={data.text} />
+                                        <Card id={data.id} title={data.title} text={data.text} />
                                     </Link>
                                     : null
                             ))
