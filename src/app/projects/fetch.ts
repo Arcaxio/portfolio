@@ -40,5 +40,6 @@ export async function updateCard(id: string, formData: FormData) {
     throw new Error('Failed to fetch revenue data.');
   }
   revalidatePath('/projects');
+  revalidatePath('/projects/[id]', 'page');
   redirect('/projects');
 }
