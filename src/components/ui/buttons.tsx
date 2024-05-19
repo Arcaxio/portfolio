@@ -6,7 +6,7 @@ export function DeleteButton({ id }: { id: string }) {
 
   return (
     <div>
-      <button className="btn btn-secondary" onClick={() => (document.getElementById('my_modal_1') as HTMLDialogElement).showModal()}>Delete</button>
+      <button className="btn btn-primary" onClick={() => (document.getElementById('my_modal_1') as HTMLDialogElement).showModal()}>Delete</button>
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Delete Confirmation</h3>

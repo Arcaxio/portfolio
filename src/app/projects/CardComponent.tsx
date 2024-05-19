@@ -6,9 +6,9 @@ export default async function CardComponent() {
     const data = await fetchData();
 
     return (
-        <div className='px-10'>
+        <div className='px-10 bg-base-300'>
             <div className="flex flex-col w-full border-opacity-50">
-                <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 1</div>
+                <div className="bg-base-100 text-primary grid h-20 card rounded-box place-items-center text-xl font-medium my-4">Act 1</div>
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (
@@ -23,7 +23,7 @@ export default async function CardComponent() {
                         <Card />
                     </Link>
                 </div>
-                <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 2</div>
+                <div className="bg-base-100 text-primary grid h-20 card rounded-box place-items-center text-xl font-medium my-4">Act 2</div>
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (
@@ -38,7 +38,7 @@ export default async function CardComponent() {
                         <Card />
                     </Link>
                 </div>
-                <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 3</div>
+                <div className="bg-base-100 text-primary grid h-20 card rounded-box place-items-center text-xl font-medium my-4">Act 3</div>
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (

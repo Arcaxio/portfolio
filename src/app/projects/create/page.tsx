@@ -1,32 +1,22 @@
 import Link from 'next/link';
 import { addCard } from '../serverFetch';
-import { LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/components';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import { NavLoggedIn, NavLoggedOut } from '@/components/ui/navbar';
 
 export default async function Page() {
-    const { isAuthenticated } = getKindeServerSession();
+    const { isAuthenticated, getUser } = getKindeServerSession();
+    const user = await getUser();
 
     return (await isAuthenticated()) ? (
         <main>
-            <div className="navbar justify-center gap-4 bg-base-100">
-                <Link href='/'>
-                    <div className="btn btn-ghost text-xl">
-                        Home
-                    </div>
-                </Link>
-                <LogoutLink>
-                    <div className="btn btn-secondary text-xl">
-                        Logout
-                    </div>
-                </LogoutLink>
-            </div>
+            <NavLoggedIn user={user} />
 
-            <div className='px-10'>
-                <div className="flex flex-row justify-between h-20 card bg-base-300 rounded-box place-items-center text-xl font-medium my-4 px-6">
+            <div className='px-10 bg-base-300 py-4'>
+                <div className="bg-base-100 text-primary flex flex-row justify-between h-20 card rounded-box place-items-center text-xl font-medium px-6 mb-4">
                     <p>Add New Card</p>
                 </div>
                 <form action={addCard}>
-                    <div className='grid gap-4 place-items-center pb-4'>
+                    <div className='text-neutral grid gap-4 place-items-center pb-4'>
                         <select className="select select-bordered w-full max-w-xs" id='act' name='act'>
                             <option value="1">Act 1</option>
                             <option value="2">Act 2</option>
@@ -46,29 +36,7 @@ export default async function Page() {
         </main>
     ) : (
         <main>
-            <div className="navbar justify-center gap-4 bg-base-100">
-                <Link href='/'>
-                    <div className="btn btn-ghost text-xl">
-                        Home
-                    </div>
-                </Link>
-                <LoginLink>
-                    <div className="btn btn-secondary text-xl">
-                        Login
-                    </div>
-                </LoginLink>
-                <RegisterLink>
-                    <div className="btn btn-secondary text-xl">
-                        Register
-                    </div>
-                </RegisterLink>
-            </div>
-
-            <div className='h-96 grid place-content-center bg-primary'>
-                <h1 className='text-5xl'>
-                    This page is protected, please login to view it
-                </h1>
-            </div>
+            <NavLoggedOut/>
         </main>
     )
 }

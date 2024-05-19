@@ -15,7 +15,7 @@ export const Card = ({
     children?: React.ReactNode;
 }) => {
     return (
-        <div className="card bg-primary hover:bg-accent border-2 border-blue-800 cursor-pointer shadow-xl">
+        <div className="card bg-primary hover:bg-accent cursor-pointer shadow-xl">
             <div className={`card-body p-4 min-h-44 ${!!title ? null : "justify-center"}`}>
                 {
                     !!title ?
