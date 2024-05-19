@@ -1,70 +1,77 @@
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import { fetchData } from './fetch';
+import { LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/components';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import CardComponent from './CardComponent';
 
 export const dynamic = 'force-dynamic'
 
 export default async function Projects() {
-    const data = await fetchData();
+    const { isAuthenticated, getUser } = getKindeServerSession();
+    const user = await getUser();
 
-    return (
+    return (await isAuthenticated()) ? (
         <main>
-            <div className="navbar justify-center bg-base-100">
+            <div className="navbar justify-center gap-4 bg-base-100">
+                <div className='avatar'>
+                    <div className='w-12 rounded-full'>
+                        {user?.picture ? (
+                            <img
+                                className="avatar-picture"
+                                src={user?.picture}
+                                alt="user profile avatar"
+                                referrerPolicy="no-referrer"
+                            />
+                        ) : (
+                            <img
+                                className="avatar-picture"
+                                src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
+                                alt="user profile avatar"
+                                referrerPolicy="no-referrer"
+                            />
+                        )}
+                    </div>
+                </div>
+                <h1 className='text-xl'>Welcome, {user?.given_name}</h1>
                 <Link href='/'>
                     <div className="btn btn-ghost text-xl">
                         Home
                     </div>
                 </Link>
+                <LogoutLink>
+                    <div className="btn btn-secondary text-xl">
+                        Logout
+                    </div>
+                </LogoutLink>
             </div>
 
-            <div className='px-10'>
-                <div className="flex flex-col w-full border-opacity-50">
-                    <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 1</div>
-                    <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
-                        {
-                            data?.map((data) => (
-                                data.act === 1 ?
-                                    <Link key={data.id} href={`/projects/${data.id}`}>
-                                        <Card id={data.id} title={data.title} text={data.text} />
-                                    </Link>
-                                    : null
-                            ))
-                        }
-                        <Link href='/projects/create'>
-                            <Card />
-                        </Link>
+            <CardComponent />
+        </main>
+    ) : (
+        <main>
+            <div className="navbar justify-center gap-4 bg-base-100">
+                <Link href='/'>
+                    <div className="btn btn-ghost text-xl">
+                        Home
                     </div>
-                    <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 2</div>
-                    <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
-                        {
-                            data?.map((data) => (
-                                data.act === 2 ?
-                                    <Link key={data.id} href={`/projects/${data.id}`}>
-                                        <Card title={data.title} text={data.text} />
-                                    </Link>
-                                    : null
-                            ))
-                        }
-                        <Link href='/projects/create'>
-                            <Card />
-                        </Link>
+                </Link>
+                <LoginLink>
+                    <div className="btn btn-secondary text-xl">
+                        Login
                     </div>
-                    <div className="grid h-20 card bg-base-300 rounded-box place-items-center my-4 text-xl font-medium">Act 3</div>
-                    <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
-                        {
-                            data?.map((data) => (
-                                data.act === 3 ?
-                                    <Link key={data.id} href={`/projects/${data.id}`}>
-                                        <Card title={data.title} text={data.text} />
-                                    </Link>
-                                    : null
-                            ))
-                        }
-                        <Link href='/projects/create'>
-                            <Card />
-                        </Link>
+                </LoginLink>
+                <RegisterLink>
+                    <div className="btn btn-secondary text-xl">
+                        Register
                     </div>
-                </div>
+                </RegisterLink>
+            </div>
+
+            <div className='h-96 grid place-content-center bg-primary'>
+                <h1 className='text-5xl'>
+                    This page is protected, please login to view it
+                </h1>
             </div>
         </main>
     )

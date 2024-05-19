@@ -1,15 +1,24 @@
 import Link from 'next/link';
 import { addCard } from '../serverFetch';
+import { LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/components';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
 export default async function Page() {
-    return (
+    const { isAuthenticated } = getKindeServerSession();
+
+    return (await isAuthenticated()) ? (
         <main>
-            <div className="navbar justify-center bg-base-100">
+            <div className="navbar justify-center gap-4 bg-base-100">
                 <Link href='/'>
                     <div className="btn btn-ghost text-xl">
                         Home
                     </div>
                 </Link>
+                <LogoutLink>
+                    <div className="btn btn-secondary text-xl">
+                        Logout
+                    </div>
+                </LogoutLink>
             </div>
 
             <div className='px-10'>
@@ -35,5 +44,31 @@ export default async function Page() {
                 </form>
             </div>
         </main>
-    );
+    ) : (
+        <main>
+            <div className="navbar justify-center gap-4 bg-base-100">
+                <Link href='/'>
+                    <div className="btn btn-ghost text-xl">
+                        Home
+                    </div>
+                </Link>
+                <LoginLink>
+                    <div className="btn btn-secondary text-xl">
+                        Login
+                    </div>
+                </LoginLink>
+                <RegisterLink>
+                    <div className="btn btn-secondary text-xl">
+                        Register
+                    </div>
+                </RegisterLink>
+            </div>
+
+            <div className='h-96 grid place-content-center bg-primary'>
+                <h1 className='text-5xl'>
+                    This page is protected, please login to view it
+                </h1>
+            </div>
+        </main>
+    )
 }
