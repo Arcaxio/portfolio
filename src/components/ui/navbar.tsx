@@ -18,7 +18,7 @@ export const NavLoggedIn = ({
         <div className="bg-base-100 navbar grid grid-cols-4 gap-2 px-12">
             <Link href='/' className="justify-self-start">
                 <button className="btn btn-circle">
-                    <CIcon icon={cilHome} height={24} className="text-neutral" />
+                    <CIcon icon={cilHome} height={24} className="" />
                 </button>
             </Link>
             <div className="justify-self-start">
@@ -48,7 +48,7 @@ export const NavLoggedIn = ({
                 <LogoutLink>
                     <button className="btn btn-primary">
                         <CIcon icon={cilAccountLogout} height={24} />
-                        <h1 className="max-md:hidden text-base">Logout</h1>
+                        <h1 className="max-md:hidden">Logout</h1>
                     </button>
                 </LogoutLink>
             </div>

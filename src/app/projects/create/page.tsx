@@ -16,14 +16,14 @@ export default async function Page() {
                     <p>Add New Card</p>
                 </div>
                 <form action={addCard}>
-                    <div className='text-neutral grid gap-4 place-items-center pb-4'>
-                        <select className="select select-bordered w-full max-w-xs" id='act' name='act'>
+                    <div className='grid gap-4 place-items-center pb-4'>
+                        <select className="text-base-content select select-bordered w-full max-w-xs" id='act' name='act'>
                             <option value="1">Act 1</option>
                             <option value="2">Act 2</option>
                             <option value="3">Act 3</option>
                         </select>
-                        <input type="text" placeholder="Title" className="input input-bordered w-full max-w-xs" id='title' name='title' />
-                        <textarea className="textarea textarea-bordered w-full max-w-xs" placeholder="Description" id='text' name='text' />
+                        <input className="text-base-content input input-bordered w-full max-w-xs" type="text" placeholder="Title" id='title' name='title' />
+                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs" placeholder="Description" id='text' name='text' />
                         <div>
                             <Link href='/projects'>
                                 <button className="btn btn-primary me-16">Back</button>

@@ -25,9 +25,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                     <DeleteButton id={id}></DeleteButton>
                 </div>
                 <form action={updateCardContents}>
-                    <div className='text-neutral grid gap-4 place-items-center pb-4'>
-                        <input type="text" placeholder="Title" className="input input-bordered w-full max-w-xs" defaultValue={data[0].title} id='title' name='title' />
-                        <textarea className="textarea textarea-bordered w-full max-w-xs" placeholder="Description" defaultValue={data[0].text} id='text' name='text' />
+                    <div className='grid gap-4 place-items-center pb-4'>
+                        <input className="text-base-content input input-bordered w-full max-w-xs" type="text" placeholder="Title" defaultValue={data[0].title} id='title' name='title' />
+                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs" placeholder="Description" defaultValue={data[0].text} id='text' name='text' />
                         <div>
                             <Link href='/projects'>
                                 <button className="btn btn-primary me-16">Back</button>

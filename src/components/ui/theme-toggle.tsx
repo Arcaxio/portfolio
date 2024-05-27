@@ -17,9 +17,13 @@ export const ThemeToggle = ({
         setIsClient(true)
     }, [])
 
+    function titleCase(string: string) {
+        return string[0].toUpperCase() + string.slice(1).toLowerCase();
+    }
+
     return (
         <>
-            <h1 className='text text-primary text-xl max-md:hidden mx-2'>{isClient ? theme : ''}</h1>
+            <h1 className='text text-primary text-xl max-md:hidden mx-2'>{isClient ? titleCase(theme ?? "") : ''}</h1>
             <input type="checkbox" className="toggle mx-2" onClick={() => theme === "dark" ? setTheme("light") : setTheme("dark")} />
         </>
     )

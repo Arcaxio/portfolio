@@ -15,7 +15,7 @@ export const Card = ({
     children?: React.ReactNode;
 }) => {
     return (
-        <div className="card bg-primary hover:bg-accent cursor-pointer shadow-xl">
+        <div className="bg-primary card hover:bg-primary-content hover:text-primary cursor-pointer shadow-xl">
             <div className={`card-body p-4 min-h-44 ${!!title ? null : "justify-center"}`}>
                 {
                     !!title ?
@@ -28,7 +28,9 @@ export const Card = ({
                         <></>
                 }
                 {
-                    text ?? <CIcon icon={cilPlus} height={64} />
+                    !!text ?
+                        <p>{text}</p>
+                        : <CIcon icon={cilPlus} height={64} />
                 }
                 {
                     children
