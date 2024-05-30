@@ -9,7 +9,7 @@ export async function fetchData() {
     return data.rows;
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to fetch revenue data.');
+    throw new Error('Failed to fetch data.');
   }
 }
 

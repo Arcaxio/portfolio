@@ -20,11 +20,12 @@ export async function addCard(formData: FormData) {
   const title = formData.get('title') as string
   const text = formData.get('text') as string
   const act = formData.get('act') as string
+  const owner = formData.get('owner') as string
 
   try {
     await sql`
     INSERT INTO data (owner, act, title, text)
-    VALUES ('a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11', ${act}, ${title}, ${text})
+    VALUES (${owner}, ${act}, ${title}, ${text})
   `;
   } catch (error) {
     console.error('Database Error:', error);

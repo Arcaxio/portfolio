@@ -18,7 +18,7 @@ export const NavLoggedIn = ({
         <div className="bg-base-100 navbar grid grid-cols-4 gap-2 px-12">
             <Link href='/' className="justify-self-start">
                 <button className="btn btn-circle">
-                    <CIcon icon={cilHome} height={24} className="" />
+                    <CIcon icon={cilHome} height={24} />
                 </button>
             </Link>
             <div className="justify-self-start">
@@ -63,20 +63,26 @@ export const NavLoggedOut = ({
 }) => {
     return (
         <>
-            <div className="bg-base-100 navbar grid grid-cols-2 gap-2 px-12">
+            <div className="bg-base-100 navbar grid grid-cols-4 gap-2 px-12">
                 <Link href='/' className="justify-self-start">
                     <button className="btn btn-circle">
-                        <CIcon icon={cilHome} height={24} className="text-neutral" />
+                        <CIcon icon={cilHome} height={24} />
                     </button>
                 </Link>
+                <div className="justify-self-start">
+                    <ThemeToggle />
+                </div>
+                <div>
+
+                </div>
                 <div className="justify-self-end">
                     <LoginLink>
-                        <div className="btn btn-primary text-xl">
+                        <div className="btn btn-primary">
                             Login
                         </div>
                     </LoginLink>
                     <RegisterLink>
-                        <div className="btn btn-primary text-xl ms-4">
+                        <div className="btn btn-primary ms-4">
                             Register
                         </div>
                     </RegisterLink>
@@ -84,7 +90,7 @@ export const NavLoggedOut = ({
             </div>
 
             <div className='h-96 grid place-content-center bg-base-300 px-6'>
-                <h1 className='text-5xl text-neutral'>
+                <h1 className='text-5xl text-base-content'>
                     This page is protected, please login to view it
                 </h1>
             </div>

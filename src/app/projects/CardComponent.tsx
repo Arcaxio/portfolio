@@ -1,8 +1,11 @@
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import { fetchData } from './fetch';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
 export default async function CardComponent() {
+    const { getUser } = getKindeServerSession();
+    const user = await getUser();
     const data = await fetchData();
 
     return (
@@ -12,7 +15,7 @@ export default async function CardComponent() {
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (
-                            data.act === 1 ?
+                            data.act === 1 && user?.id === data.owner ?
                                 <Link key={data.id} href={`/projects/${data.id}`}>
                                     <Card id={data.id} title={data.title} text={data.text} />
                                 </Link>
@@ -27,7 +30,7 @@ export default async function CardComponent() {
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (
-                            data.act === 2 ?
+                            data.act === 2 && user?.id === data.owner ?
                                 <Link key={data.id} href={`/projects/${data.id}`}>
                                     <Card title={data.title} text={data.text} />
                                 </Link>
@@ -42,7 +45,7 @@ export default async function CardComponent() {
                 <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4 mb-4">
                     {
                         data?.map((data) => (
-                            data.act === 3 ?
+                            data.act === 3 && user?.id === data.owner ?
                                 <Link key={data.id} href={`/projects/${data.id}`}>
                                     <Card title={data.title} text={data.text} />
                                 </Link>
