@@ -7,8 +7,12 @@ import { NavLoggedIn, NavLoggedOut } from '@/components/ui/navbar';
 
 export default async function Page({ params }: { params: { id: string } }) {
     const { isAuthenticated, getUser } = getKindeServerSession();
-    const user = await getUser();
+    let user;
 
+    if (await isAuthenticated()){
+        user = await getUser();
+    }
+    
     const id = params.id;
     const [data] = await Promise.all([
         fetchCardData(id)

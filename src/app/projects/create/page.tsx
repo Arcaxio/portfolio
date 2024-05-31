@@ -5,7 +5,11 @@ import { NavLoggedIn, NavLoggedOut } from '@/components/ui/navbar';
 
 export default async function Page() {
     const { isAuthenticated, getUser } = getKindeServerSession();
-    const user = await getUser();
+    let user;
+
+    if (await isAuthenticated()){
+        user = await getUser();
+    }
 
     return (await isAuthenticated()) ? (
         <main>
