@@ -13,11 +13,11 @@ export function DeleteButton({ id }: { id: string }) {
           <p className="py-4">Are you sure you want to delete this card?</p>
           <div className="modal-action">
             <form action={deleteCardAction}>
-              <button className="btn btn-secondary w-20">Yes</button>
+              <button className="btn btn-primary w-20">Yes</button>
             </form>
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn w-20 ms-4">No</button>
+              <button className="btn btn-primary btn-outline w-20 ms-4">No</button>
             </form>
           </div>
         </div>

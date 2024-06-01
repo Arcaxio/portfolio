@@ -31,7 +31,7 @@ export default async function Page() {
                         <input className='hidden' value={user?.id} id='owner' name='owner' />
                         <div>
                             <Link href='/projects'>
-                                <button className="btn btn-primary me-16">Back</button>
+                                <button className="btn btn-primary btn-outline me-16">Back</button>
                             </Link>
                             <button className="btn btn-primary ms-16">Submit</button>
                         </div>

@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                         <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs" placeholder="Description" defaultValue={data[0].text} id='text' name='text' />
                         <div>
                             <Link href='/projects'>
-                                <button className="btn btn-primary me-16">Back</button>
+                                <button className="btn btn-primary btn-outline me-16">Back</button>
                             </Link>
                             <button className="btn btn-primary ms-16">Submit</button>
                         </div>
