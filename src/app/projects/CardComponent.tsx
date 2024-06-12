@@ -83,7 +83,7 @@ export default async function CardComponent() {
                                             <li className='p-4'>
                                                 FINALE (80% TO 99%)
                                                 <br></br>
-                                                The hero proves they have truly learned the theme and enacts the plan they came up with in the Break Into 3. Bad guys are destroyed, flaws are conquered, lovers are reunited. Not only is the hero’s world saved, but it’s a better place than it was before.
+                                                The hero proves they have truly learned the theme and enacts the plan they came up with in the Break Into 3. Bad guys are destroyed, flaws are conquered, lovers are reunited. Not only is the hero's world saved, but it's a better place than it was before.
 
                                             </li>
                                             <li className='p-4'>
@@ -113,7 +113,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         FUN AND GAMES (20% TO 50%)
                                         <br></br>
-                                        This is where we see the hero in their new world. They’re either loving it or hating it. Succeeding or floundering. Also called the promise of the premise, this section represents the “hook” of the story (why the reader picked up the novel in the first place).
+                                        This is where we see the hero in their new world. They're either loving it or hating it. Succeeding or floundering. Also called the promise of the premise, this section represents the “hook” of the story (why the reader picked up the novel in the first place).
                                     </li>
                                     <li className='p-4'>
                                         MIDPOINT (50%)
@@ -123,7 +123,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         BAD GUYS CLOSE IN (50% TO 75%)
                                         <br></br>
-                                        If the Midpoint was a false victory, this section will be a downward path where things get progressively worse for the hero. If the Midpoint was a false defeat, this section will be an upward path where things seem to get progressively better for the hero. But regardless of path, the hero’s deep-rooted flaws (or internal bad guys) are closing in.
+                                        If the Midpoint was a false victory, this section will be a downward path where things get progressively worse for the hero. If the Midpoint was a false defeat, this section will be an upward path where things seem to get progressively better for the hero. But regardless of path, the hero's deep-rooted flaws (or internal bad guys) are closing in.
                                     </li>
                                     <li className='p-4'>
                                         ALL IS LOST (75%)
@@ -133,7 +133,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         DARK NIGHT OF THE SOUL (75% TO 80%)
                                         <br></br>
-                                        A reaction beat where the hero takes time to process everything that’s happened thus far. The hero should be worse off than at the start of the novel. The darkest hour—just before the dawn—is the moment right before the hero figures out the solution to their big problem and learns the theme or life lesson.
+                                        A reaction beat where the hero takes time to process everything that's happened thus far. The hero should be worse off than at the start of the novel. The darkest hour—just before the dawn—is the moment right before the hero figures out the solution to their big problem and learns the theme or life lesson.
 
                                     </li>
                                 </ul>
@@ -147,7 +147,7 @@ export default async function CardComponent() {
                             <li className='p-4'>
                                 OPENING IMAGE (0 TO 1%)
                                 <br></br>
-                                A "before" snapshot of your hero and their world.
+                                A “before” snapshot of your hero and their world.
                             </li>
                             <li className='p-4'>
                                 THEME STATED (5%)
