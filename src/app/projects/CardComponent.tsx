@@ -83,7 +83,7 @@ export default async function CardComponent() {
                                             <li className='p-4'>
                                                 FINALE (80% TO 99%)
                                                 <br></br>
-                                                The hero proves they have truly learned the theme and enacts the plan they came up with in the Break Into 3. Bad guys are destroyed, flaws are conquered, lovers are reunited. Not only is the hero's world saved, but it's a better place than it was before.
+                                                The hero proves they have truly learned the theme and enacts the plan they came up with in the Break Into 3. Bad guys are destroyed, flaws are conquered, lovers are reunited. Not only is the hero&apos;s world saved, but it&apos;s a better place than it was before.
 
                                             </li>
                                             <li className='p-4'>
@@ -102,7 +102,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         BREAK INTO 2 (20%)
                                         <br></br>
-                                        The moment the hero decides to accept the call to action, leave their comfort zone, try something new, or venture into a new world or new way of thinking. It's a decisive action beat that separates the status quo world of Act 1 from the new “upside-down” world of Act 2.
+                                        The moment the hero decides to accept the call to action, leave their comfort zone, try something new, or venture into a new world or new way of thinking. It&apos;s a decisive action beat that separates the status quo world of Act 1 from the new “upside-down” world of Act 2.
                                     </li>
                                     <li className='p-4'>
                                         B STORY (22%)
@@ -113,7 +113,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         FUN AND GAMES (20% TO 50%)
                                         <br></br>
-                                        This is where we see the hero in their new world. They're either loving it or hating it. Succeeding or floundering. Also called the promise of the premise, this section represents the “hook” of the story (why the reader picked up the novel in the first place).
+                                        This is where we see the hero in their new world. They&apos;re either loving it or hating it. Succeeding or floundering. Also called the promise of the premise, this section represents the “hook” of the story (why the reader picked up the novel in the first place).
                                     </li>
                                     <li className='p-4'>
                                         MIDPOINT (50%)
@@ -123,7 +123,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         BAD GUYS CLOSE IN (50% TO 75%)
                                         <br></br>
-                                        If the Midpoint was a false victory, this section will be a downward path where things get progressively worse for the hero. If the Midpoint was a false defeat, this section will be an upward path where things seem to get progressively better for the hero. But regardless of path, the hero's deep-rooted flaws (or internal bad guys) are closing in.
+                                        If the Midpoint was a false victory, this section will be a downward path where things get progressively worse for the hero. If the Midpoint was a false defeat, this section will be an upward path where things seem to get progressively better for the hero. But regardless of path, the hero&apos;s deep-rooted flaws (or internal bad guys) are closing in.
                                     </li>
                                     <li className='p-4'>
                                         ALL IS LOST (75%)
@@ -133,7 +133,7 @@ export default async function CardComponent() {
                                     <li className='p-4'>
                                         DARK NIGHT OF THE SOUL (75% TO 80%)
                                         <br></br>
-                                        A reaction beat where the hero takes time to process everything that's happened thus far. The hero should be worse off than at the start of the novel. The darkest hour—just before the dawn—is the moment right before the hero figures out the solution to their big problem and learns the theme or life lesson.
+                                        A reaction beat where the hero takes time to process everything that&apos;s happened thus far. The hero should be worse off than at the start of the novel. The darkest hour—just before the dawn—is the moment right before the hero figures out the solution to their big problem and learns the theme or life lesson.
 
                                     </li>
                                 </ul>
@@ -152,12 +152,12 @@ export default async function CardComponent() {
                             <li className='p-4'>
                                 THEME STATED (5%)
                                 <br></br>
-                                A statement made by a character (typically not the hero) that hints at what the hero's arc will be (that is, what the hero must learn/discover before the end of the book). Also referred to as a life lesson.
+                                A statement made by a character (typically not the hero) that hints at what the hero&apos;s arc will be (that is, what the hero must learn/discover before the end of the book). Also referred to as a life lesson.
                             </li>
                             <li className='p-4'>
                                 SETUP (1% TO 10%)
                                 <br></br>
-                                An exploration of the hero's status quo life and all its flaws, where we learn what the hero's life looks like before its epic transformation. Here we also introduce other supporting characters and the hero's primary goal. But most important, we show the hero's reluctance to change (aka learn the theme) while also hinting at the stakes at risk should the hero not change.
+                                An exploration of the hero&apos;s status quo life and all its flaws, where we learn what the hero&apos;s life looks like before its epic transformation. Here we also introduce other supporting characters and the hero&apos;s primary goal. But most important, we show the hero&apos;s reluctance to change (aka learn the theme) while also hinting at the stakes at risk should the hero not change.
                             </li>
                             <li className='p-4'>
                                 CATALYST (10%)
@@ -167,7 +167,7 @@ export default async function CardComponent() {
                             <li className='p-4'>
                                 DEBATE (10% TO 20%)
                                 <br></br>
-                                A reaction sequence in which the hero debates what they will do next. It's usually presented in the form of a question (such as “Should I go?”). The purpose of this beat is to show the hero's reluctance to change.
+                                A reaction sequence in which the hero debates what they will do next. It&apos;s usually presented in the form of a question (such as “Should I go?”). The purpose of this beat is to show the hero&apos;s reluctance to change.
                             </li>
                         </ul>
                     </div>
