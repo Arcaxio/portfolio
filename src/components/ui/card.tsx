@@ -16,7 +16,7 @@ export const Card = ({
 }) => {
     return (
         <div className="bg-primary card hover:bg-primary-content hover:text-primary cursor-pointer shadow-xl">
-            <div className={`card-body p-4 min-h-44 max-h-44 ${!!title ? null : "justify-center"} overflow-y-auto break-all`}>
+            <div className={`card-body p-4 min-h-44 max-h-44 ${!!title ? null : "justify-center"} overflow-y-auto`} style={{wordBreak: "break-word"}}>
                 {
                     !!title ?
                         <div className="flex justify-between">
