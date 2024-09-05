@@ -30,7 +30,7 @@ export default function Home() {
           Arcaxio&apos;s Portfolio <br></br>
           <Highlight className="text-black dark:text-white">
             <Link href='/projects'>
-              What I've made!
+              What I&apos;ve made!
             </Link>
           </Highlight>
         </motion.h1>
