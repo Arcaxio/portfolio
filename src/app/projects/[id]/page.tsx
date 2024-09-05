@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <form action={updateCardContents}>
                     <div className='grid gap-4 place-items-center pb-4'>
                         <input className="text-base-content input input-bordered w-full max-w-xs" type="text" placeholder="Title" defaultValue={data[0].title} id='title' name='title' />
-                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs" placeholder="Description" defaultValue={data[0].text} id='text' name='text' />
+                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs h-36" placeholder="Description" defaultValue={data[0].text} id='text' name='text' />
                         <div>
                             <Link href='/projects'>
                                 <button className="btn btn-primary btn-outline me-16">Back</button>

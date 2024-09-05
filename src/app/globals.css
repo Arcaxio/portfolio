@@ -16,11 +16,15 @@
   }
 }
 
+:root, [data-theme] {
+  background-color: transparent;
+  /* color: var(--fallback-bc,oklch(var(--bc)/1)); */
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: rgb(var(--background-start-rgb)); */
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -33,22 +37,18 @@ main {
   width: 100vw;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff00;
+  background: transparent;
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffffffbf;
+  background: oklch(var(--p));
   border-radius: 8px;
 }
 

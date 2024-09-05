@@ -17,7 +17,7 @@ export const NavLoggedIn = ({
     return (
         <div className="bg-base-100 navbar grid grid-cols-4 gap-2 px-12">
             <Link href='/' className="justify-self-start">
-                <button className="btn btn-circle">
+                <button className="btn btn-primary btn-circle">
                     <CIcon icon={cilHome} height={24} />
                 </button>
             </Link>

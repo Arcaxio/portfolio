@@ -30,21 +30,11 @@ export default function Home() {
           Arcaxio&apos;s Portfolio <br></br>
           <Highlight className="text-black dark:text-white">
             <Link href='/projects'>
-              Just testing things out
+              What I've made!
             </Link>
           </Highlight>
         </motion.h1>
       </HeroHighlight>
-
-      <MacbookScroll src={logo} title="Cool scroll animation, woah" />
-
-      <BackgroundGradientAnimation>
-        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
-          <p className="bg-clip-text drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
-            Cool Gradient Section
-          </p>
-        </div>
-      </BackgroundGradientAnimation>
 
       {/* Grid Background */}
       <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
@@ -55,7 +45,6 @@ export default function Home() {
         </p>
       </div>
 
-      <CanvasRevealEffectDemo />
     </main>
   );
 }

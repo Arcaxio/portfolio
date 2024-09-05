@@ -27,7 +27,7 @@ export default async function Page() {
                             <option value="3">Act 3</option>
                         </select>
                         <input className="text-base-content input input-bordered w-full max-w-xs" type="text" placeholder="Title" id='title' name='title' />
-                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs" placeholder="Description" id='text' name='text' />
+                        <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs h-36" placeholder="Description" id='text' name='text' />
                         <input className='hidden' value={user?.id} id='owner' name='owner' />
                         <div>
                             <Link href='/projects'>

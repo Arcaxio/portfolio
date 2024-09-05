@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Layout({
+export default function ProjectsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

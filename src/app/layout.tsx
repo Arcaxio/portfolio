@@ -31,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
-      <body className={inter.className}>
+    <html lang="en">
+      <body className={`${inter.className} body-tag bg-base-300`}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="dark"
