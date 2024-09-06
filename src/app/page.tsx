@@ -3,7 +3,7 @@ import { FloatingDockComponent } from "@/components/ui/floating-dock-component";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import { IconMail } from "@tabler/icons-react";
-import { alertToast } from '@/components/ui/alertToast'
+import { AlertToast } from '@/components/ui/alertToast'
 
 export default function Home() {
   return (
@@ -99,7 +99,7 @@ export default function Home() {
             <div>
               {/* <button className="btn btn-primary mx-1" onClick={() => { alertToast() }} ><IconClipboard />Copy</button>
                */}
-              {alertToast()}
+              {AlertToast()}
               <a href="mailto:jasperkueh@gmail.com" className="btn btn-primary mx-1"><IconMail />Compose</a>
             </div>
           </div>

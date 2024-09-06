@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { CToast, CToaster } from "@coreui/react";
 import { IconClipboard } from "@tabler/icons-react";
 
-export function alertToast() {
+export function AlertToast() {
   const [toast, addToast] = useState(0)
   const toaster = useRef()
   const exampleToast = (
