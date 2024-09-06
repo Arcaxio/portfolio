@@ -3,9 +3,8 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
   IconBrandX,
-  IconExchange,
+  IconBrandLinkedin,
   IconHome,
-  IconNewSection,
   IconTerminal2,
   IconMail
 } from "@tabler/icons-react";
@@ -41,6 +40,13 @@ export function FloatingDockComponent() {
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/Arcaxio",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/jasper-kueh/",
     },
     {
         title: "Contact",

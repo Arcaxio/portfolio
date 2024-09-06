@@ -7,8 +7,8 @@ export function AlertToast() {
   const [toast, addToast] = useState(0)
   const toaster = useRef()
   const exampleToast = (
-    <CToast className="left-40 -top-2 h-16" delay={1500}>
-      <div role="alert" className="alert w-80">
+    <CToast className="left-34 -top-2 h-16" delay={1500}>
+      <div role="alert" className="alert w-84">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -27,7 +27,7 @@ export function AlertToast() {
   return (
     <>
       {/* <CButton color="primary" onClick={() => addToast(exampleToast)}>Send a toast</CButton> */}
-      <button className="btn btn-primary mx-1" onClick={() => {addToast(exampleToast); navigator.clipboard.writeText("jasperkueh@gmail.com")}} ><IconClipboard />Copy</button>
+      <button className="btn btn-primary me-1" onClick={() => {addToast(exampleToast); navigator.clipboard.writeText("jasperkueh@gmail.com")}} ><IconClipboard />Copy</button>
       <CToaster className="fixed" push={toast} ref={toaster} />
     </>
   )
