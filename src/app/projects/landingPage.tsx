@@ -12,7 +12,7 @@ export default function LandingPage() {
                 className="text-5xl md:text-7xl lg:text-9xl font-bold text-black dark:text-white text-center"
                 direction="up"
                 framerProps={{
-                    show: { transition: { delay: 0.4, duration: 0.2 } },
+                    show: { transition: { delay: 0.6, duration: 0.2 } },
                 }}
                 text="Write your Imaginations"
             />
@@ -21,7 +21,7 @@ export default function LandingPage() {
                     <motion.button className="btn btn-lg sm:btn-wide btn-outline text-xl sm:text-2xl"
                         initial={{ y:-32, opacity: 0, scale: 0.75 }}
                         animate={{ y:0, opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.6, duration: 0.2 }}
+                        transition={{ delay: 0.8, duration: 0.2 }}
                     >
                         Try out now!
                     </motion.button>
