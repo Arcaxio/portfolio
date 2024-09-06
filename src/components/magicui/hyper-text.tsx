@@ -20,7 +20,7 @@ const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 export default function HyperText({
   before,
   after,
-  duration = 800,
+  duration = 600,
   framerProps = {
     initial: { opacity: 0, y: -10 },
     animate: { opacity: 1, y: 0 },
@@ -30,22 +30,26 @@ export default function HyperText({
   animateOnLoad = true,
 }: HyperTextProps) {
   const [displayText, setDisplayText] = useState(before.split(""));
-  const [trigger, setTrigger] = useState(false);
+  const [trigger, setTrigger] = useState<"toAfter" | "toBefore" | null>(null);
   const iterations = useRef(0);
-  const isAnimatingToAfter = useRef(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const triggerAnimation = (toAfter: boolean) => {
+  const startScrambling = (toAfter: boolean) => {
     iterations.current = 0;
-    isAnimatingToAfter.current = toAfter;
-    setTrigger(true);
+    setTrigger(toAfter ? "toAfter" : "toBefore");
   };
 
   useEffect(() => {
     if (!trigger) return;
 
-    const targetText = isAnimatingToAfter.current ? after : before;
+    const targetText = trigger === "toAfter" ? after : before;
 
-    const interval = setInterval(() => {
+    // Clear any existing interval before starting a new one
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(() => {
       if (iterations.current < targetText.length) {
         setDisplayText((t) =>
           t.map((l, i) =>
@@ -58,20 +62,38 @@ export default function HyperText({
         );
         iterations.current += 0.1;
       } else {
-        setTrigger(false);
-        clearInterval(interval);
+        clearInterval(intervalRef.current!);
+        if (trigger === "toAfter") {
+          // Queue the "toBefore" animation after completing "toAfter"
+          setTrigger("toBefore");
+        } else {
+          setTrigger(null); // End the cycle
+        }
       }
     }, duration / (targetText.length * 10));
 
     // Clean up interval on unmount
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalRef.current!);
   }, [before, after, duration, trigger]);
+
+  const handleMouseEnter = () => {
+    startScrambling(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Queue the toBefore animation after completing toAfter
+    if (trigger === "toAfter") {
+      setTimeout(() => startScrambling(false), 100)
+      return;
+    }
+    startScrambling(false);
+  };
 
   return (
     <div
       className="overflow-hidden py-2 flex cursor-default scale-100"
-      onMouseEnter={() => triggerAnimation(true)}
-      onMouseLeave={() => triggerAnimation(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <AnimatePresence>
         {displayText.map((letter, i) => (
