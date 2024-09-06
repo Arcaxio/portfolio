@@ -6,13 +6,14 @@ import { ThemeToggle } from '@/components/ui/theme-toggle';
 import Link from 'next/link';
 import CIcon from "@coreui/icons-react";
 import { cilAccountLogout, cilHome } from "@coreui/icons";
+import Image from 'next/image'
 
 export const NavLoggedIn = ({
     children,
     user,
 }: {
     children?: React.ReactNode;
-    user?: KindeUser | null;
+    user?: KindeUser<any> | null;   //Added any
 }) => {
     return (
         <div className="bg-base-100 navbar grid grid-cols-4 gap-2 px-12">
@@ -27,18 +28,22 @@ export const NavLoggedIn = ({
             <div className='avatar justify-self-end'>
                 <div className='w-12 rounded-full mx-2'>
                     {user?.picture ? (
-                        <img
+                        <Image
                             className="avatar-picture"
                             src={user?.picture}
                             alt="user profile avatar"
                             referrerPolicy="no-referrer"
-                        />
-                    ) : (
-                        <img
+                            width={48}
+                            height={48}
+                            />
+                        ) : (
+                            <Image
                             className="avatar-picture"
                             src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg"
                             alt="user profile avatar"
                             referrerPolicy="no-referrer"
+                            width={48}
+                            height={48}
                         />
                     )}
                 </div>
