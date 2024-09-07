@@ -15,7 +15,7 @@ export const ThemeToggle = ({
         if (theme === "light") {
             setIsClient(false)
         }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     // function titleCase(string: string) {
     //     return string[0].toUpperCase() + string.slice(1).toLowerCase();
