@@ -22,7 +22,7 @@ export const NavLoggedIn = ({
                     <CIcon icon={cilHome} height={24} />
                 </button>
             </Link>
-            <div className="justify-self-start">
+            <div className="justify-self-start btn btn-primary btn-circle">
                 <ThemeToggle />
             </div>
             <div className='avatar justify-self-end'>

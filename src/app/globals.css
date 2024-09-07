@@ -16,21 +16,29 @@
   }
 }
 
-:root, [data-theme] {
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* :root, [data-theme] {
   background-color: transparent;
-  /* color: var(--fallback-bc,oklch(var(--bc)/1)); */
+  color: var(--fallback-bc,oklch(var(--bc)/1));
+} */
+
+* {
+  scrollbar-color: unset;
+}
+
+*:hover {
+  scrollbar-color: unset;
 }
 
 body {
   /* color: rgb(var(--foreground-rgb)); */
   /* background: rgb(var(--background-start-rgb)); */
   overflow-x: hidden;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 main {

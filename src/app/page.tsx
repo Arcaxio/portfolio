@@ -67,7 +67,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
+          viewport={{ once: true, amount: 0.20 }}
           transition={{ ease: "easeOut", duration: 0.35, delay: 0.4 }}
         >
           <FocusCardsDemo />
