@@ -22,22 +22,14 @@
   }
 }
 
-/* :root, [data-theme] {
-  background-color: transparent;
-  color: var(--fallback-bc,oklch(var(--bc)/1));
-} */
-
-* {
-  scrollbar-color: unset;
-}
-
-*:hover {
-  scrollbar-color: unset;
+:root, [data-theme] {
+  background-color: oklch(var(--b3));
+  /* color: var(--fallback-bc,oklch(var(--bc)/1)); */
 }
 
 body {
   /* color: rgb(var(--foreground-rgb)); */
-  /* background: rgb(var(--background-start-rgb)); */
+  /* background: oklch(var(--b3)); */
   overflow-x: hidden;
 }
 
@@ -49,10 +41,10 @@ main {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
+.card-body::-webkit-scrollbar-track {
   background: transparent;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -61,5 +53,26 @@ main {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555555bf;
+  background: oklch(var(--n));
+}
+
+@supports not selector(::-webkit-scrollbar){
+  * {
+    scrollbar-color: oklch(var(--p)) oklch(var(--b3));
+    scrollbar-width: thin;
+  }
+  
+  *:hover {
+    scrollbar-color: oklch(var(--p)) oklch(var(--b3));
+  }
+}
+
+@supports selector(::-webkit-scrollbar){
+  * {
+    scrollbar-color: unset;
+  }
+  
+  *:hover {
+    scrollbar-color: unset;
+  }
 }

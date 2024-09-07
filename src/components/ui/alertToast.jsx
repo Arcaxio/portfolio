@@ -27,7 +27,7 @@ export function AlertToast() {
   return (
     <>
       {/* <CButton color="primary" onClick={() => addToast(exampleToast)}>Send a toast</CButton> */}
-      <button className="btn btn-primary me-1" onClick={() => {addToast(exampleToast); navigator.clipboard.writeText("jasperkueh@gmail.com")}} ><IconClipboard />Copy</button>
+      <button className="btn join-item btn-primary me-1" onClick={() => { addToast(exampleToast); navigator.clipboard.writeText("jasperkueh@gmail.com") }}><IconClipboard />Copy</button>
       <CToaster className="fixed" push={toast} ref={toaster} />
     </>
   )

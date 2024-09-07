@@ -42,7 +42,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.20 }}
           transition={{ ease: "easeOut", duration: 0.3, delay: 0.6 }}
         >
-          <div className="text-6xl">
+          <div className="text-5xl sm:text-6xl">
             <div className="flex flex-row flex-wrap">
               <p className="pt-1.5 pe-0.5">
                 Hello, I&apos;m&nbsp;
@@ -52,7 +52,7 @@ export default function Home() {
             <p className="text-accent font-['Montserrat'] pb-2">
               Front-End Web Developer
             </p>
-            <motion.div className="text-3xl"
+            <motion.div className="text-2xl sm:text-3xl"
               initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.20 }}
@@ -71,8 +71,8 @@ export default function Home() {
             viewport={{ once: true, amount: 0.20 }}
             transition={{ ease: "easeOut", duration: 0.3, delay: 1.8 }}
           >
-            <p className="text-4xl pb-2 text-primary">MY TECH STACK</p>
-            <p className="text-3xl pb-8">My ever expanding repertoire of <span className="text-accent">technologies</span> that I use.</p>
+            <p className="text-3xl sm:text-4xl pb-2 text-primary">MY TECH STACK</p>
+            <p className="text-2xl sm:text-3xl pb-8">My ever expanding repertoire of <span className="text-accent">technologies</span> that I use.</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -168,11 +168,11 @@ export default function Home() {
               <p className="font-bold">Email</p>
               <p className="">jasperkueh@gmail.com</p>
             </div>
-            <div className="mt-2">
+            <div className="join mt-2">
               {/* <button className="btn btn-primary mx-1" onClick={() => { alertToast() }} ><IconClipboard />Copy</button>
                */}
               {AlertToast()}
-              <a href="mailto:jasperkueh@gmail.com" className="btn btn-primary ms-1"><IconMail />Compose</a>
+              <a href="mailto:jasperkueh@gmail.com" className="btn join-item btn-primary ms-1"><IconMail />Compose</a>
             </div>
           </div>
         </div>
