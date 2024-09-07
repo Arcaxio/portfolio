@@ -29,7 +29,7 @@ export default function Home() {
         transition={{ ease: "easeOut", duration: 0.25, delay: 0.6 }}
       >
         <div className="text-6xl pt-20">
-          <div className="flex flex-row ">
+          <div className="flex flex-row flex-wrap">
             <p className="pt-1.5 pe-0.5">
               Hello, I&apos;m&nbsp;
             </p>
