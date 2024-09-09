@@ -50,7 +50,7 @@ export default function Home() {
               <HyperText className="font-['Montserrat'] text-primary" before="Jasper&nbsp;" after="Arcaxio" />
             </div>
             <p className="text-accent font-['Montserrat'] pb-2">
-              Front-End Web Developer
+              Front-End Developer
             </p>
             <motion.div className="text-2xl sm:text-3xl"
               initial={{ opacity: 0, x: -12 }}
