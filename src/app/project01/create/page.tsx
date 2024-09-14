@@ -30,7 +30,7 @@ export default async function Page() {
                         <textarea className="text-base-content textarea textarea-bordered w-full max-w-xs h-36" placeholder="Description" id='text' name='text' />
                         <input className='hidden' value={user?.id} id='owner' name='owner' />
                         <div>
-                            <Link href='/projects'>
+                            <Link href='/project01'>
                                 <button className="btn btn-primary btn-outline me-16">Back</button>
                             </Link>
                             <button className="btn btn-primary ms-16">Submit</button>
