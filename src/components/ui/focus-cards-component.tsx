@@ -5,7 +5,7 @@ export function FocusCardsDemo() {
     {
       title: "Project 01",
       src: "/mockup1.png",
-      link: "/projects"
+      link: "/project01"
     },
     {
       title: "FYP Project",

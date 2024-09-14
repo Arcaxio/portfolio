@@ -1,5 +1,5 @@
 'use client'
-import { deleteCard } from "@/app/projects/serverFetch";
+import { deleteCard } from "@/app/project01/serverFetch";
 
 export function DeleteButton({ id }: { id: string }) {
   const deleteCardAction = deleteCard.bind(null, id)
