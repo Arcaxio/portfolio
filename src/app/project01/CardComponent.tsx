@@ -20,13 +20,13 @@ export default async function CardComponent() {
                             {
                                 data?.map((data) => (
                                     data.act === 1 && user?.id === data.owner ?
-                                        <Link key={data.id} href={`/projects/${data.id}`}>
+                                        <Link key={data.id} href={`/project01/${data.id}`}>
                                             <Card id={data.id} title={data.title} text={data.text} />
                                         </Link>
                                         : null
                                 ))
                             }
-                            <Link href='/projects/create'>
+                            <Link href='/project01/create'>
                                 <Card />
                             </Link>
                         </div>
@@ -40,13 +40,13 @@ export default async function CardComponent() {
                                     {
                                         data?.map((data) => (
                                             data.act === 2 && user?.id === data.owner ?
-                                                <Link key={data.id} href={`/projects/${data.id}`}>
+                                                <Link key={data.id} href={`/project01/${data.id}`}>
                                                     <Card id={data.id} title={data.title} text={data.text} />
                                                 </Link>
                                                 : null
                                         ))
                                     }
-                                    <Link href='/projects/create'>
+                                    <Link href='/project01/create'>
                                         <Card />
                                     </Link>
                                 </div>
@@ -60,13 +60,13 @@ export default async function CardComponent() {
                                             {
                                                 data?.map((data) => (
                                                     data.act === 3 && user?.id === data.owner ?
-                                                        <Link key={data.id} href={`/projects/${data.id}`}>
+                                                        <Link key={data.id} href={`/project01/${data.id}`}>
                                                             <Card id={data.id} title={data.title} text={data.text} />
                                                         </Link>
                                                         : null
                                                 ))
                                             }
-                                            <Link href='/projects/create'>
+                                            <Link href='/project01/create'>
                                                 <Card />
                                             </Link>
                                         </div>

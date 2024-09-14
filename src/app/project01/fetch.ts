@@ -39,7 +39,7 @@ export async function updateCard(id: string, formData: FormData) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch data.');
   }
-  revalidatePath('/projects');
-  revalidatePath('/projects/[id]', 'page');
-  redirect('/projects');
+  revalidatePath('/project01');
+  revalidatePath('/project01/[id]', 'page');
+  redirect('/project01');
 }

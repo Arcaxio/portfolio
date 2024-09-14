@@ -11,9 +11,9 @@ export async function deleteCard(id: string) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch revenue data.');
   }
-  revalidatePath('/projects');
-  revalidatePath('/projects/[id]', 'page');
-  redirect('/projects');
+  revalidatePath('/project01');
+  revalidatePath('/project01/[id]', 'page');
+  redirect('/project01');
 }
 
 export async function addCard(formData: FormData) {
@@ -31,7 +31,7 @@ export async function addCard(formData: FormData) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch data.');
   }
-  revalidatePath('/projects');
-  revalidatePath('/projects/[id]', 'page');
-  redirect('/projects');
+  revalidatePath('/project01');
+  revalidatePath('/project01/[id]', 'page');
+  redirect('/project01');
 }
