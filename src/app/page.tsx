@@ -27,7 +27,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 48 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.3, delay: 1 }}
+        transition={{ ease: "easeOut", duration: 0.3, delay: 1.4 }}
         className="fixed z-10 right-10 md:right-20 bottom-0"
       >
         <FloatingDockComponent />
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 12 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ ease: "easeOut", duration: 0.3, delay: 1.8 }}
+            transition={{ ease: "easeOut", duration: 0.3, delay: 1.4 }}
           >
             <p className="text-3xl sm:text-4xl pb-2 text-primary">
               MY TECH STACK
@@ -84,10 +84,10 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.8, y: 36 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ ease: "easeOut", duration: 0.3, delay: 2.2 }}
+            transition={{ ease: "easeOut", duration: 0.3, delay: 1.8 }}
           >
             <Marquee
               speed={100}
