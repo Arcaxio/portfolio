@@ -1,6 +1,6 @@
 "use client";
-import { FloatingDockComponent } from "@/components/ui/floating-dock-component";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IconMail } from "@tabler/icons-react";
 import { AlertToast } from "@/components/ui/alertToast";
@@ -19,30 +19,95 @@ import PostgreSQLSVG from "@/components/icons/postgresql";
 import ReactSVG from "@/components/icons/react";
 import TailwindSVG from "@/components/icons/tailwindcss";
 import TypescriptSVG from "@/components/icons/typescript";
+import ArcaxioSVG from "@/components/icons/arcaxio";
+import { PopdownMenu } from "@/components/selfmadeui/popdown-menu";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    window.innerWidth < 1024 ? setIsVisible(true) : setIsVisible(false);
+  }, []);
+
   return (
     <>
-      {/* MacBar */}
-      <motion.div
-        initial={{ opacity: 0, y: 48 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.3, delay: 1.4 }}
-        className="fixed z-10 right-10 md:right-20 bottom-0"
-      >
-        <FloatingDockComponent />
-      </motion.div>
+      {/* Popdown menu */}
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            key="popdown"
+            className="fixed top-8 right-8 min-h-dvh w-min z-[3]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: "linear", duration: 0.2 }}
+          >
+            <PopdownMenu />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Greetings */}
-      <div className="flex flex-col justify-around min-h-dvh w-4/5 py-8 mx-auto">
+      <div className="flex flex-col justify-evenly min-h-dvh w-11/12 lg:w-9/12 py-4 mx-auto">
+        {/* Navbar */}
         <motion.div
+          className="hidden lg:flex navbar bg-primary text-base-300 rounded-full my-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.3, delay: 0.6 }}
+          onViewportLeave={() => setIsVisible(true)}
+          onViewportEnter={() => setIsVisible(false)}
+        >
+          <div className="navbar-start">
+            <button className="btn btn-ghost hover:bg-primary">
+              <ArcaxioSVG
+                className="fill-base-300"
+                height="100%"
+                width="100%"
+              />
+            </button>
+          </div>
+          <div className="navbar-end me-2">
+            <a className="btn btn-ghost text-xl" href="#section-projects">
+              Projects
+            </a>
+            <a className="btn btn-ghost text-xl" href="https://x.com/arcaxio">
+              Twitter
+            </a>
+            <a
+              className="btn btn-ghost text-xl"
+              href="https://github.com/Arcaxio"
+            >
+              Github
+            </a>
+            <a
+              className="btn btn-ghost text-xl"
+              href="https://www.linkedin.com/in/jasper-kueh/"
+            >
+              LinkedIn
+            </a>
+            <button
+              className="btn btn-ghost text-xl"
+              onClick={() =>
+                (
+                  document.getElementById("my_modal_2") as HTMLDialogElement
+                ).showModal()
+              }
+            >
+              Contact
+            </button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="my-2"
           id="section-greetings"
           initial={{ opacity: 0, y: -12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ ease: "easeOut", duration: 0.3, delay: 0.6 }}
+          transition={{ ease: "easeOut", duration: 0.3, delay: 1 }}
         >
-          <div className="text-5xl sm:text-6xl">
+          <div className="text-5xl lg:text-6xl">
             <div className="flex flex-row flex-wrap">
               <p className="pt-1.5 pe-0.5">Hello, I&apos;m&nbsp;</p>
               <HyperText
@@ -55,11 +120,11 @@ export default function Home() {
               Front-End Developer
             </p>
             <motion.div
-              className="text-2xl sm:text-3xl"
+              className="text-2xl lg:text-3xl"
               initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ ease: "easeOut", duration: 0.3, delay: 1 }}
+              transition={{ ease: "easeOut", duration: 0.3, delay: 1.4 }}
             >
               <p>
                 I strive to design & develop software that is of satisfactory
@@ -68,17 +133,17 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.div>
-        <div>
+        <div className="my-2">
           <motion.div
             initial={{ opacity: 0, x: 12 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ ease: "easeOut", duration: 0.3, delay: 1.4 }}
+            transition={{ ease: "easeOut", duration: 0.3, delay: 1.8 }}
           >
-            <p className="text-3xl sm:text-4xl pb-2 text-primary">
+            <p className="text-4xl lg:text-5xl pb-2 text-primary">
               MY TECH STACK
             </p>
-            <p className="text-2xl sm:text-3xl pb-8">
+            <p className="text-2xl lg:text-3xl pb-8">
               My ever expanding repertoire of{" "}
               <span className="text-accent">technologies</span> that I use.
             </p>
@@ -87,7 +152,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8, y: 36 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ ease: "easeOut", duration: 0.3, delay: 1.8 }}
+            transition={{ ease: "easeOut", duration: 0.3, delay: 2.2 }}
           >
             <Marquee
               speed={100}
@@ -162,7 +227,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div className="w-4/5 py-8 mx-auto">
+      <div className="w-11/12 lg:w-9/12 py-4 mx-auto">
         <motion.div
           id="section-projects"
           initial={{ opacity: 0, y: 24 }}
