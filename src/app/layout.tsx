@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`${inter.className} bg-base-300`}>
+      <body className={`${inter.className} bg-base-100`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

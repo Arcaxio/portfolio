@@ -23,7 +23,7 @@
 }
 
 :root, [data-theme] {
-  background-color: oklch(var(--b3));
+  background-color: oklch(var(--b1));
   /* color: var(--fallback-bc,oklch(var(--bc)/1)); */
 }
 
