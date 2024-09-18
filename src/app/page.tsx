@@ -275,9 +275,9 @@ export default function Home() {
         className="relative h-[50dvh] w-full bg-base-100"
         style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
       >
-        <footer className="fixed bottom-0 h-[50dvh] w-full" id="section-footer">
+        <footer className="fixed bottom-0 h-[50dvh] w-full md:text-xl xl:text-2xl" id="section-footer">
           <div className="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 gap-2 justify-items-center items-center h-full w-11/12 lg:w-9/12 mx-auto py-8 md:py-12">
-            <div className="w-full h-full col-span-2 md:row-span-2 md:col-span-1 text-lg text-center">
+            <div className="w-full h-full col-span-2 md:row-span-2 md:col-span-1 text-center">
               <div className="flex flex-row md:flex-col items-center justify-around h-full border-2 border-primary p-2 md:p-4">
                 <p className="text-xl md:text-3xl">
                   Interested?<br></br>Let&apos;s talk!
@@ -308,21 +308,21 @@ export default function Home() {
                 </motion.button>
               </div>
             </div>
-            <div className="w-full h-full col-span-2 text-lg text-center">
-              <div className="flex flex-row h-full items-center justify-evenly">
-                <div className="flex flex-row items-center hover:text-primary">
+            <div className="w-full h-full col-span-2 text-center">
+              <div className="flex flex-row flex-wrap h-full items-center justify-evenly">
+                <div className="flex flex-row items-center hover:text-primary px-2">
                   <IconBrandX className="me-2" />
                   <a href="https://x.com/arcaxio">Twitter</a>
                 </div>
-                <div className="flex flex-row items-center hover:text-primary">
+                <div className="flex flex-row items-center hover:text-primary px-2">
                   <IconBrandGithub className="me-2" />
                   <a href="https://github.com/Arcaxio">Github</a>
                 </div>
-                <div className="flex flex-row items-center hover:text-primary">
+                <div className="flex flex-row items-center hover:text-primary px-2">
                   <IconBrandLinkedin className="me-2" />
                   <a href="https://github.com/Arcaxio">LinkedIn</a>
                 </div>
-                <div className="flex flex-row items-center hover:text-primary">
+                <div className="flex flex-row items-center hover:text-primary px-2">
                   <IconBrandDiscord className="me-2" />
                   <a href="https://discordapp.com/users/156669575650344960">
                     Discord
@@ -330,21 +330,22 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-full col-span-2 text-lg text-center">
+            <div className="w-full h-full col-span-2 text-center">
               <div className="flex flex-row h-full items-end justify-evenly">
-                <div className="flex flex-col h-full items-start justify-evenly px-8">
-                  <li className="hover:text-primary">
+                <div className="flex flex-col h-full items-start justify-evenly px-2 md:px-8">
+                  <ol className="hover:text-primary">
                     <a href="#">About</a>
-                  </li>
-                  <li className="hover:text-primary">
+                  </ol>
+                  <ol className="hover:text-primary">
                     <a href="#section-projects">Projects</a>
-                  </li>
-                  <li className="hover:text-primary">
+                  </ol>
+                  <ol className="hover:text-primary">
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                       Links
                     </a>
-                  </li>
+                  </ol>
                 </div>
+
                 <div className="flex flex-col h-full items-center justify-evenly">
                   <p>Portfolio v1 - 17 Sep 2024</p>
                   <p className="text-center">
