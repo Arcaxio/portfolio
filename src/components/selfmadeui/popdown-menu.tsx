@@ -47,13 +47,13 @@ export function PopdownMenu() {
       ),
       href: "https://www.linkedin.com/in/jasper-kueh/",
     },
-    {
-        title: "Contact",
-        icon: (
-          <IconMail className="h-full w-full text-base-300 stroke-[1.5px]" />
-        ),
-        href: "#button-mail",
-      },
+    // {
+    //     title: "Contact",
+    //     icon: (
+    //       <IconMail className="h-full w-full text-base-300 stroke-[1.5px]" />
+    //     ),
+    //     href: "#button-mail",
+    //   },
   ];
   return (
     <div className="h-[4rem] m-2">
