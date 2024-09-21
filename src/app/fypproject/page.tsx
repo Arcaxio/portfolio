@@ -20,17 +20,14 @@ export default async function FYPProject() {
         </p>
         <br />
         <p>
-          Veniam ea veniam fugiat eu nulla non irure. Ipsum deserunt magna culpa
-          sunt anim excepteur. Esse sunt deserunt incididunt nulla deserunt
-          incididunt ad pariatur eiusmod officia excepteur sint. Proident
-          nostrud consequat reprehenderit mollit id esse amet. Do enim et
-          laborum eu sint excepteur officia reprehenderit id adipisicing culpa.
-          Cupidatat commodo consectetur ex enim. Tempor tempor ad dolor ex esse
-          qui proident irure. Minim mollit anim minim non quis eu nostrud
-          laborum. Occaecat consectetur proident non veniam do aliqua ullamco
-          irure irure incididunt exercitation sit. Nisi non laboris duis est
-          veniam elit. Adipisicing reprehenderit mollit do anim voluptate non
-          consectetur tempor do esse ullamco ipsum.
+          First, you&apos;ll need to use Linux! But don&apos;t worry, you don&apos;t need to
+          wipe your drive or dual boot, using the Ubuntu Windows Subsystem for Linux &#40;WSL&#41;
+          will suffice. So head on over to the Windows Store and download the latest version of
+          the Ubuntu WSL.
+        </p>
+        <br />
+        <p>
+        &#91;INCOMPLETE&#93;
         </p>
       </article>
     </div>
