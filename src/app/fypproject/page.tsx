@@ -20,15 +20,40 @@ export default async function FYPProject() {
         </p>
         <br />
         <p>
-          First, you&apos;ll need to use Linux! But don&apos;t worry, you don&apos;t need to
-          wipe your drive or dual boot, using the Ubuntu Windows Subsystem for Linux &#40;WSL&#41;
-          will suffice. So head on over to the Windows Store and download the latest version of
-          the Ubuntu WSL.
+          First, you&apos;ll need to use Linux! But don&apos;t worry, you
+          don&apos;t need to wipe your drive or dual boot, using the Ubuntu
+          Windows Subsystem for Linux &#40;WSL&#41; will suffice. So head on
+          over to the Windows Store and download the latest version of the
+          Ubuntu WSL.
         </p>
         <br />
         <p>
-        &#91;INCOMPLETE&#93;
+          After that, open up the Ubuntu WSL, and type in the following
+          commands:
         </p>
+        <br />
+        <div className="text-start">
+          <li>sudo apt update</li>
+          <li>sudo apt install snapd</li>
+          <li>sudo snap install helm –classic</li>
+          <li>sudo snap install kubectl –classic</li>
+          <li>sudo snap install doctl</li>
+          <li>sudo snap connect doctl:kube-config</li>
+          <li>sudo snap connect doctl:ssh-keys :ssh-keys</li>
+          <li>sudo snap connect doctl:dot-docker</li>
+        </div>
+        <p>
+
+        </p>
+        <br/>
+        <p>
+
+        </p>
+        <br/>
+        
+        {/* Incomplete */}
+        <br/>
+        <p>&#91;INCOMPLETE&#93;</p>
       </article>
     </div>
   );
